@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    
+    <title>Bitácora de apuntes</title>
+    <link rel="icon" type="image/png" href="/static/img/w.svg" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <div style="text-align: center">
+          <img src="/static/img/w.svg" style="width: 200px" />
+        </div>
+                <nav>
+          <a href="/"><i class="mu mu-home"></i>Inicio</a>
+        </nav>
+              </header>
+
+      <article>
+                <header class="title">
+          <h1>Estados en git porcelain</h1>
+          <p class="date">2024-08-31</p>
+        </header>
+                 <hr />
+        <div class="tags">
+                    <span class="tag"><img src="/static/img/tag.svg" />git
+status porcelain</span>
+                  </div>
+        <hr />
+                <section>
+                    <!-- Body -->
+          <h1 id="estados-en-git-porcelain">Estados en git
+          porcelain</h1>
+          <p>Combinaciones completas de git status –porcelain Formato
+          general</p>
+          <pre><code>XY FILENAME</code></pre>
+          <p>Donde <code>X</code> representa el estado en el index
+          (staging area) y <code>Y</code> el estado en el árbol de
+          trabajo. Todas las combinaciones posibles</p>
+          <p><strong>Modificaciones</strong>:</p>
+          <p><code>M</code>: Modificado en index <code>M</code>:
+          Modificado en árbol de trabajo <code>MM</code>: Modificado en
+          ambos</p>
+          <p><strong>Adiciones</strong>:</p>
+          <p><code>A</code>: Añadido al index <code>AM</code>: Añadido
+          al index, modificado en árbol de trabajo</p>
+          <p><strong>Eliminaciones</strong>:</p>
+          <p><code>D</code>: Eliminado del index <code>D</code>:
+          Eliminado del árbol de trabajo <code>DD</code>: Eliminado de
+          ambos</p>
+          <p><strong>Renombrados</strong>:</p>
+          <p><code>R</code>: Renombrado en index <code>RM</code>:
+          Renombrado en index, modificado en árbol de trabajo</p>
+          <p><strong>Copiados</strong>:</p>
+          <p><code>C</code>: Copiado en index <code>CM</code>: Copiado
+          en index, modificado en árbol de trabajo</p>
+          <p><strong>Actualizados pero sin mezclar
+          (conflictos)</strong>:</p>
+          <p><code>U</code>: Conflicto de actualización <code>UD</code>:
+          Conflicto de actualización, eliminado en árbol de trabajo
+          <code>UA</code>: Conflicto de actualización, añadido en árbol
+          de trabajo <code>UU</code>: Conflicto de actualización en
+          ambos</p>
+          <p><strong>No rastreados</strong>:</p>
+          <p><code>??</code>: Archivo nuevo, no rastreado</p>
+          <p><strong>Ignorados</strong>:</p>
+          <p><code>!!</code>: Archivo ignorado</p>
+          <p><strong>Combinaciones adicionales (menos
+          comunes)</strong>:</p>
+          <p><code>AD</code>: Añadido al index, eliminado del árbol de
+          trabajo <code>MD</code>: Modificado en index, eliminado del
+          árbol de trabajo <code>A?</code>: Añadido al index, el archivo
+          original ya no existe <code>?M</code>: Existente, modificado
+          pero aún no añadido al index</p>
+          <p><strong>Notas importantes</strong></p>
+          <ul>
+          <li>No todas las combinaciones teóricamente posibles son
+          válidas o tienen sentido en la práctica.</li>
+          <li>Algunas combinaciones son mutuamente excluyentes (por
+          ejemplo, un archivo no puede estar simultáneamente añadido y
+          eliminado en el mismo lugar). -Git puede mostrar combinaciones
+          adicionales en situaciones muy específicas o versiones
+          particulares.</li>
+          </ul>
+        </section>
+      </article>
+
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>Walter Fabián Rodríguez Salazar</small>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <small>
+                <a href="https://gitlab.com/wfrodriguez">GitLab</a>
+              </small>
+            </li>
+            <li>
+              <small>
+                <a href="https://www.linkedin.com/in/walterfrs/">LinkedIn</a>
+              </small>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
+      </body>
+</html>

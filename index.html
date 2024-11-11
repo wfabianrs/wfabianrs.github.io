@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+        <link rel="stylesheet" href="/static/css/datatables.min.css" />
+    
+    <title>Bitácora de apuntes</title>
+    <link rel="icon" type="image/png" href="/static/img/w.svg" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <div style="text-align: center">
+          <img src="/static/img/w.svg" style="width: 200px" />
+        </div>
+                <!-- menubar -->
+              </header>
+
+      <article>
+                 <section>
+                    <!-- Body -->
+          <p>Bienvenido a este espacio de conocimiento en desarrollo de
+          software. Soy un desarrollador especializado en Golang, con
+          pasión por construir soluciones backend optimizadas para
+          Linux, diseñadas para ser escalables, confiables y eficientes.
+          Este sitio es una recopilación de aprendizajes, técnicas y
+          reflexiones, basada en mi experiencia resolviendo desafíos
+          técnicos y optimizando el rendimiento del software. Aquí
+          encontrarás apuntes detallados sobre desarrollo de software y
+          sus tecnologías asociadas. Espero que estos recursos resulten
+          útiles a desarrolladores y equipos que comparten el compromiso
+          de crear software de calidad y alto impacto.</p>
+          <table>
+          <colgroup>
+          <col style="width: 33%" />
+          <col style="width: 33%" />
+          <col style="width: 33%" />
+          </colgroup>
+          <thead>
+          <tr class="header">
+          <th>Fecha</th>
+          <th>Título</th>
+          <th>Tags</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="odd">
+          <td>2024-10-13</td>
+          <td>[cobol/mth] <a href="/posts/uk38-02-cobol-basico">Cobol
+          MTH 02 - Aspectos básicos del lenguaje COBOL</a></td>
+          <td>cobol, mainframe, mainframestechhelp</td>
+          </tr>
+          <tr class="even">
+          <td>2024-10-12</td>
+          <td>[cobol/mth] <a href="/posts/ykg8-01-introduccion">Cobol
+          MTH 01 - Introducción</a></td>
+          <td>cobol, maninframe, mainframestechhelp</td>
+          </tr>
+          <tr class="odd">
+          <td>2024-10-11</td>
+          <td>[cobol/mth] <a href="/posts/ekdt-00-prefacio">Cobol MTH 00
+          - Prefacio</a></td>
+          <td>cobol, mainframe, mainframestechhelp</td>
+          </tr>
+          <tr class="even">
+          <td>2024-09-16</td>
+          <td>[git] <a
+          href="/posts/l4u0-commit-convencionales-basado-en-gitmoji">Commit
+          convencionales basado en gitmoji</a></td>
+          <td>git commit gitmoji conventional-commits</td>
+          </tr>
+          <tr class="odd">
+          <td>2024-08-31</td>
+          <td>[git] <a
+          href="/posts/knce-estados-en-git-porcelain">Estados en git
+          porcelain</a></td>
+          <td>git status porcelain</td>
+          </tr>
+          <tr class="even">
+          <td>2024-08-29</td>
+          <td>[cheatsheets] <a href="/posts/fqln-zathura">Zatura PDF
+          Viewer keyboard shortcuts</a></td>
+          <td>cheatsheet, zathura, keymaps</td>
+          </tr>
+          <tr class="odd">
+          <td>2024-08-27</td>
+          <td>[latex] <a
+          href="/posts/6a5w-plantillas-de-latex">Plantillas de
+          latex</a></td>
+          <td>latex plantilla link</td>
+          </tr>
+          <tr class="even">
+          <td>2024-08-27</td>
+          <td>[vim] <a
+          href="/posts/ir5h-cual-es-tu-atajo-mas-productivo-con-vim">¿Cuál
+          es tu atajo más productivo con Vim?</a></td>
+          <td>vim, productividad</td>
+          </tr>
+          </tbody>
+          </table>
+        </section>
+      </article>
+
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>Walter Fabián Rodríguez Salazar</small>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <small>
+                <a href="https://gitlab.com/wfrodriguez">GitLab</a>
+              </small>
+            </li>
+            <li>
+              <small>
+                <a href="https://www.linkedin.com/in/walterfrs/">LinkedIn</a>
+              </small>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
+        <script src="/static/js/datatables.min.js"></script>
+    <script>
+      addEventListener("DOMContentLoaded", (evt) => {
+        let table = document.getElementsByTagName("table")[0];
+
+        let dataTable = new simpleDatatables.DataTable(table);
+      });
+    </script>
+      </body>
+</html>

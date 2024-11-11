@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    
+    <title>Bitácora de apuntes</title>
+    <link rel="icon" type="image/png" href="/static/img/w.svg" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <div style="text-align: center">
+          <img src="/static/img/w.svg" style="width: 200px" />
+        </div>
+                <nav>
+          <a href="/"><i class="mu mu-home"></i>Inicio</a>
+        </nav>
+              </header>
+
+      <article>
+                <header class="title">
+          <h1>Cobol MTH 02 - Aspectos básicos del lenguaje COBOL</h1>
+          <p class="date">2024-10-13</p>
+        </header>
+                 <hr />
+        <div class="tags">
+                    <span class="tag"><img src="/static/img/tag.svg" />cobol</span>
+                    <span class="tag"><img src="/static/img/tag.svg" />mainframe</span>
+                    <span class="tag"><img src="/static/img/tag.svg" />mainframestechhelp</span>
+                  </div>
+        <hr />
+                <section>
+                    <!-- Body -->
+          <h2 id="verbos-básicos">Verbos básicos</h2>
+          <p>Cada lenguaje de programación está diseñado con algún
+          sistema definido conjunto de caracteres, símbolos, palabras
+          clave y normas. Del mismo modo, COBOL tiene su propio conjunto
+          de caracteres, símbolos, palabras clave y normas. A
+          continuación se presentan los términos básicos y conocidos en
+          el COBOL -</p>
+          <ul>
+          <li>Conjunto de caracteres</li>
+          <li>Palabras</li>
+          <li>Variables</li>
+          <li>Literales</li>
+          <li>Constantes</li>
+          <li>Constantes figurativas</li>
+          <li>Comentarios</li>
+          <li>Separadores</li>
+          </ul>
+          <h3 id="conjunto-de-caracteres">Conjunto de caracteres</h3>
+          <p>El carácter es la unidad básica de cualquier lenguaje de
+          programación, y el conjunto de caracteres válidos crea el
+          juego de caracteres. Incluye letras (tanto mayúsculas como
+          minúsculas), dígitos y caracteres especiales.</p>
+          <p>Del mismo modo, el lenguaje COBOL tiene su propio conjunto
+          de caracteres válidos (78) que contiene alfabetos(A-Z/a-z),
+          dígitos(0-9), y caracteres especiales.</p>
+          <p>La lista de caracteres básicos COBOL son:</p>
+          <table style="width:98%;">
+          <colgroup>
+          <col style="width: 8%" />
+          <col style="width: 20%" />
+          <col style="width: 36%" />
+          <col style="width: 32%" />
+          </colgroup>
+          <thead>
+          <tr class="header">
+          <th>Caracter</th>
+          <th>Significado</th>
+          <th>Uso</th>
+          <th>Ejemplo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="odd">
+          <td><code>␣/' '</code></td>
+          <td>Espacio</td>
+          <td>Caracter de separación</td>
+          <td><code>01 WS-A   PIC X(10).</code></td>
+          </tr>
+          <tr class="even">
+          <td rowspan="2"><code>+</code></td>
+          <td rowspan="2">Más</td>
+          <td>Operador aritmético</td>
+          <td><code>COMPUTE WS-A = WS-B + WS-C.</code></td>
+          </tr>
+          <tr class="odd">
+          <td>Carácter de edición</td>
+          <td><code>01 WS-A   PIC +9(3).</code></td>
+          </tr>
+          <tr class="even">
+          <td rowspan="6"><code>-</code></td>
+          <td rowspan="6">Menos o guion</td>
+          <td>Operador aritmético</td>
+          <td><code>COMPUTE WS-A = WS-B * WS-C.</code></td>
+          </tr>
+          <tr class="odd">
+          <td>Carácter de edición</td>
+          <td><code>01 WS-A   PIC **9.</code></td>
+          </tr>
+          <tr class="even">
+          <td rowspan="3">Carácter de continuación</td>
+          <td rowspan="3"><pre><code>----+----1----+----2----+----3----+
+       01 WS-VAR  PIC X(27) VALUE
+      -     &#39;THIS IS MULTI-LINE&#39;.</code></pre></td>
+          </tr>
+          <tr class="odd">
+          </tr>
+          <tr class="even">
+          </tr>
+          <tr class="odd">
+          <td>Elemento de palabra COBOL</td>
+          <td><code>01 WS-A   PIC 9(3).</code></td>
+          </tr>
+          <tr class="even">
+          <td rowspan="5"><code>*</code></td>
+          <td rowspan="5">Asterisco</td>
+          <td>Carácter de edición</td>
+          <td>``</td>
+          </tr>
+          <tr class="odd">
+          <td rowspan="3">Carácter de comentario</td>
+          <td rowspan="3"><pre><code>----+----1----+----2----+----3----+
+       * THIS IS COMMENT LINE.</code></pre></td>
+          </tr>
+          <tr class="even">
+          </tr>
+          <tr class="odd">
+          </tr>
+          <tr class="even">
+          <td>Operador aritmético</td>
+          <td>``</td>
+          </tr>
+          <tr class="odd">
+          <td rowspan="5"><code>/</code></td>
+          <td rowspan="5">Barra oblicua-diagonal</td>
+          <td>Operador aritmético</td>
+          <td><code>COMPUTE WS-A = WS-B / WS-C.</code></td>
+          </tr>
+          <tr class="even">
+          <td>Carácter de edición</td>
+          <td><code>01 WS-DATE   PIC 99/99/99.</code></td>
+          </tr>
+          <tr class="odd">
+          <td rowspan="3">Carácter de continuación</td>
+          <td rowspan="3"><pre class="cobol"><code>----+----1----+----2----+----3----+
+       01 WS-VAR  PIC X(27) VALUE
+      /     &#39;THIS IS MULTI-LINE&#39;.</code></pre></td>
+          </tr>
+          <tr class="even">
+          </tr>
+          <tr class="odd">
+          </tr>
+          <tr class="even">
+          <td rowspan="2"><code>=</code></td>
+          <td rowspan="2">Signo igual</td>
+          <td>Carácter de separación</td>
+          <td><code>COMPUTE WS-A = WS-B / WS-C.</code></td>
+          </tr>
+          <tr class="odd">
+          <td>Carácter de relación</td>
+          <td><code>IF WS-A = 10</code></td>
+          </tr>
+          <tr class="even">
+          <td><code>$</code></td>
+          <td>Signo de moneda</td>
+          <td>Caracter de edición</td>
+          <td><code>01 WS-SALARY  PIC $$99.</code></td>
+          </tr>
+          <tr class="odd">
+          <td rowspan="2"><code>,</code></td>
+          <td rowspan="2">Coma</td>
+          <td>Caracter de edición</td>
+          <td><code>01 WS-SALARY  PIC 99,999.</code></td>
+          </tr>
+          <tr class="even">
+          <td>Caracter separador</td>
+          <td><code>MOVE 10 TO WS-A, WS-B.</code></td>
+          </tr>
+          <tr class="odd">
+          <td><code>;</code></td>
+          <td>Punto y coma</td>
+          <td>Caracter separador</td>
+          <td><code>MOVE 10 TO WS-A, WS-B.</code></td>
+          </tr>
+          <tr class="even">
+          <td rowspan="2"><code>.</code></td>
+          <td rowspan="2">Punto decimal o periodo</td>
+          <td>Caracter de edición</td>
+          <td><code>01 WS-SALARY PIC 99,999.00.</code></td>
+          </tr>
+          <tr class="odd">
+          <td>Caracter separador</td>
+          <td><code>MOVE 10 TO WS-A.</code></td>
+          </tr>
+          <tr class="even">
+          <td><code>"</code></td>
+          <td>Comillas</td>
+          <td>Caracter separador</td>
+          <td><code>01 WS-VAR PIC X(5) VALUE "HELLO".</code></td>
+          </tr>
+          <tr class="odd">
+          <td><code>'</code></td>
+          <td>Apóstrofo</td>
+          <td>Caracter separador</td>
+          <td><code>01 WS-VAR PIC X(5) VALUE 'HELLO'.</code></td>
+          </tr>
+          <tr class="even">
+          <td><code>(</code></td>
+          <td>Paréntesis izquierdo</td>
+          <td>Caracter separador</td>
+          <td><code>IF (WS-A = 10) AND (WS-B = 5)</code></td>
+          </tr>
+          <tr class="odd">
+          <td><code>)</code></td>
+          <td>Paréntesis derecho</td>
+          <td>Caracter separador</td>
+          <td><code>IF (WS-A = 10) AND (WS-B = 5)</code></td>
+          </tr>
+          <tr class="even">
+          <td><code>&gt;</code></td>
+          <td>Mayor que</td>
+          <td>Caracter relacional</td>
+          <td><code>IF WS-A &gt; 10</code></td>
+          </tr>
+          <tr class="odd">
+          <td><code>&lt;</code></td>
+          <td>Menor que</td>
+          <td>Caracter relacional</td>
+          <td><code>IF WS-A &lt; 10</code></td>
+          </tr>
+          <tr class="even">
+          <td><code>:</code></td>
+          <td>Dos puntos</td>
+          <td>Caracter relacional</td>
+          <td><code>MOVE WS-VAR(1:10) TO WS-VAR1.</code></td>
+          </tr>
+          <tr class="odd">
+          <td><code>_</code></td>
+          <td>Subrayado</td>
+          <td>Elemento de palabra definido por el usuario</td>
+          <td><code>01 WS_VAR PIC X(10).</code></td>
+          </tr>
+          <tr class="even">
+          <td><code>A-Z</code></td>
+          <td>Alfabeto (mayúsculas)</td>
+          <td>Caracteres alfabéticos</td>
+          <td><code>01 WS-A PIC X(10).</code></td>
+          </tr>
+          <tr class="odd">
+          <td><code>a-z</code></td>
+          <td>Alfabeto (minúsculas)</td>
+          <td>Caracteres alfabéticos</td>
+          <td><code>01 ws-a PIC X(10).</code></td>
+          </tr>
+          <tr class="even">
+          <td><code>0-9</code></td>
+          <td>Números</td>
+          <td>Caracteres numéricos</td>
+          <td><code>01 WS-A PIC 9(10) VALUE 1234.</code></td>
+          </tr>
+          </tbody>
+          </table>
+        </section>
+      </article>
+
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>Walter Fabián Rodríguez Salazar</small>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <small>
+                <a href="https://gitlab.com/wfrodriguez">GitLab</a>
+              </small>
+            </li>
+            <li>
+              <small>
+                <a href="https://www.linkedin.com/in/walterfrs/">LinkedIn</a>
+              </small>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
+      </body>
+</html>

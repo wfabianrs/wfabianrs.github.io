@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    $if(table)$
+    <link rel="stylesheet" href="/static/css/datatables.min.css" />
+    $endif$
+
+    <title>Bitácora de apuntes</title>
+    <link rel="icon" type="image/png" href="/static/img/w.svg" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <div style="text-align: center">
+          <img src="/static/img/w.svg" style="width: 200px" />
+        </div>
+        $if(table)$
+        <!-- menubar -->
+        $else$
+        <nav>
+          <a href="/"><i class="mu mu-home"></i>Inicio</a>
+        </nav>
+        $endif$
+      </header>
+
+      <article>
+        $if(title)$
+        <header class="title">
+          <h1>$title$</h1>
+          <p class="date">$date$</p>
+        </header>
+        $endif$ $if(tags)$
+        <hr />
+        <div class="tags">
+          $for(tags)$
+          <span class="tag"><img src="/static/img/tag.svg" />$tags$</span>
+          $endfor$
+        </div>
+        <hr />
+        $endif$
+        <section>
+          $if(table-of-contents)$
+          <div class="toc" id="$TOC$">$table-of-contents$</div>
+          $endif$
+          <!-- Body -->
+          $body$
+        </section>
+      </article>
+
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>Walter Fabián Rodríguez Salazar</small>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <small>
+                <a href="https://gitlab.com/wfrodriguez">GitLab</a>
+              </small>
+            </li>
+            <li>
+              <small>
+                <a href="https://www.linkedin.com/in/walterfrs/">LinkedIn</a>
+              </small>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
+    $if(table)$
+    <script src="/static/js/datatables.min.js"></script>
+    <script>
+      addEventListener("DOMContentLoaded", (evt) => {
+        let table = document.getElementsByTagName("table")[0];
+
+        let dataTable = new simpleDatatables.DataTable(table);
+      });
+    </script>
+    $endif$
+  </body>
+</html>

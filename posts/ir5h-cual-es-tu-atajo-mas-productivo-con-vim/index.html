@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    
+    <title>Bitácora de apuntes</title>
+    <link rel="icon" type="image/png" href="/static/img/w.svg" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <div style="text-align: center">
+          <img src="/static/img/w.svg" style="width: 200px" />
+        </div>
+                <nav>
+          <a href="/"><i class="mu mu-home"></i>Inicio</a>
+        </nav>
+              </header>
+
+      <article>
+                <header class="title">
+          <h1>¿Cuál es tu atajo más productivo con Vim?</h1>
+          <p class="date">2024-08-27</p>
+        </header>
+                 <hr />
+        <div class="tags">
+                    <span class="tag"><img src="/static/img/tag.svg" />vim</span>
+                    <span class="tag"><img src="/static/img/tag.svg" />productividad</span>
+                  </div>
+        <hr />
+                <section>
+                    <!-- Body -->
+          <h1 id="cuál-es-tu-atajo-más-productivo-con-vim">¿Cuál es tu
+          atajo más productivo con Vim?</h1>
+          <blockquote>
+          <p>Esta es una traducción de una pregunta de <a
+          href="https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim">Stackoverflow</a>.
+          Sólo he traducido la pregunta que se realiza y la mejor
+          respuesta que se escogió en la publicación:</p>
+          </blockquote>
+          <h2 id="pregunta">Pregunta</h2>
+          <p>He oído hablar mucho de <a
+          href="https://www.vim.org/">Vim</a>, tanto pros como contras.
+          Realmente parece que deberías ser (como desarrollador) más
+          rápido con Vim que con cualquier otro editor. Estoy usando Vim
+          para hacer algunas cosas básicas y en el mejor de los casos
+          soy 10 veces menos productivo con Vim.</p>
+          <p>Las únicas dos cosas que deberían importarte cuando hablas
+          de velocidad (puede que no te importen lo suficiente, pero
+          deberías) son:</p>
+          <ol type="1">
+          <li>Usar alternativamente las manos izquierda y derecha es la
+          forma <strong>más rápida</strong> de usar el teclado.</li>
+          <li>No tocar nunca el ratón es la segunda forma de ser lo más
+          rápido posible. Tardas una eternidad en mover la mano, coger
+          el ratón, moverlo y volver a llevarlo al teclado (y a menudo
+          tienes que mirar el teclado para asegurarte de que has
+          devuelto bien la mano al lugar correcto).</li>
+          </ol>
+          <p>Aquí tienes dos ejemplos que demuestran por qué soy mucho
+          menos productivo con Vim.</p>
+          <p><strong>Copiar/Cortar y pegar.</strong> Lo hago todo el
+          tiempo. Con todos los editores contemporáneos presionas
+          <code>Shift</code> con la mano izquierda, y mueves el cursor
+          con la derecha para seleccionar texto. Luego
+          <code>Ctrl+C</code> copias, mueves el cursor y
+          <code>Ctrl+V</code> pegas.</p>
+          <p>Con Vim es horrible:</p>
+          <ul>
+          <li><code>yy</code> para copiar una línea (¡casi nunca quieres
+          toda la línea!)</li>
+          <li><code>[xx]yy</code> para copiar <code>xx</code> líneas en
+          el buffer. Pero nunca sabes exactamente si has seleccionado lo
+          que querías. A menudo tengo que hacer <code>[xx]dd</code> y
+          luego ¡<code>u</code> para deshacer!</li>
+          </ul>
+          <p>¿Otro ejemplo? <strong>Buscar y reemplazar:</strong></p>
+          <ul>
+          <li><strong>En <a
+          href="http://en.wikipedia.org/wiki/PSPad">PSPad</a>:</strong>
+          <code>Ctrl+f</code>, escribe lo que quieres buscar y pulsa
+          <code>Intro</code>.</li>
+          <li>En Vim: <code>/</code>, a continuación, escriba lo que
+          desea buscar, a continuación, si hay algunos caracteres
+          especiales poner <code>\\</code> antes de cada carácter
+          especial, a continuación, pulse <code>Intro</code>.</li>
+          </ul>
+          <p>Y todo con Vim es así: parece que no sé manejarlo de la
+          manera correcta.</p>
+          <p><em>Nota:</em> <strong>Ya he leído la <a
+          href="http://www.viemu.com/vi-vim-cheat-sheet.gif">hoja de
+          trucos</a> de Vim :)</strong></p>
+          <p>Mi pregunta es:</p>
+          <p>¿Cuál es la forma de utilizar Vim que te hace más
+          productivo que con un editor contemporáneo?</p>
+          <h2 id="la-mejor-respuesta"><a
+          href="https://stackoverflow.com/a/1220118">La mejor
+          respuesta</a></h2>
+          <blockquote>
+          <p><em><strong>yank:</strong> literalmente ‘jalar/tirar’ pero
+          en esta traducción la definición mas exacta sería
+          ‘copiar’</em></p>
+          </blockquote>
+          <h3 id="tu-problema-con-vim-es-que-no-entiendes-vi.">Tu
+          problema con Vim es que no entiendes vi.</h3>
+          <p>Mencionas copiar con <code>yy</code> y te quejas de que
+          casi nunca quieres cortar líneas enteras. De hecho los
+          programadores, editando código fuente, muy a menudo quieren
+          trabajar en líneas enteras, rangos de líneas y bloques de
+          código. Sin embargo, <code>yy</code> es sólo una de las muchas
+          maneras de tirar de texto en el búfer de copia anónima (o
+          “registro” como se le llama en <strong>vi</strong>).</p>
+          <p>El <em>“Zen”</em> de <strong>vi</strong> es que estás
+          hablando un idioma. La inicial <code>y</code> es un verbo. El
+          enunciado <code>yy</code> es un sinónimo de <code>y_</code>.
+          La <code>y</code> se escribe dos veces para que sea más fácil
+          de teclear, ya que es una operación muy común.</p>
+          <p>También se puede expresar como <code>dd</code>
+          <code>P</code> (borrar la línea actual y pegar una copia en su
+          lugar; dejando una copia en el registro anónimo como efecto
+          secundario). Los <em>“verbos”</em> <code>y</code> y
+          <code>d</code> toman como <em>“sujeto”</em> cualquier
+          movimiento. Así <code>yW</code> es “copiar desde aquí (el
+          cursor) hasta el final de la actual/siguiente (gran) palabra”
+          y <code>y'a</code> es “copiar desde aquí hasta la línea que
+          contiene la marca llamada ‘<em>a</em>’”.</p>
+          <p>Si sólo entiendes los movimientos básicos del cursor
+          arriba, abajo, izquierda y derecha, entonces vi no será para
+          ti más productivo que una copia del “bloc de notas”. (De
+          acuerdo, todavía tendrás resaltado de sintaxis y la capacidad
+          de manejar archivos más grandes que unos insignificantes
+          ~45KB; pero trabaja conmigo aquí)(N. del T. Esta respuesta fue
+          publicada en el año 2009, el autor de esta respuesta supongo
+          que hacia una broma acerca del bloc de notas de Microsoft, ya
+          que desde su creación en 1985 hasta esa época, incluso a la
+          versión a la hora de escribir esta nota: Windows 11, no ha
+          tenido cambios significativos. Pero en sus versiones iniciales
+          <em>no se podían abrir ficheros de más de 54 KB, incluso
+          Microsoft aconsejaba que no se intentara abrir con archivos de
+          más de 45 KB</em>).</p>
+          <p><strong>vi</strong> tiene 26 <em>marcas</em> y 26
+          <em>registros</em>. Una marca se establece en cualquier
+          posición del cursor utilizando el comando <code>m</code>. Cada
+          marca se designa con una sola letra minúscula. Así,
+          <code>ma</code> fija la marca ‘<em>a</em>’ en la posición
+          actual, y <code>mz</code> fija la marca ‘<em>z</em>’. Puedes
+          moverte a la línea que contiene una marca utilizando el
+          comando <code>'</code> (<em>comillas simples</em>). Así,
+          <code>'a</code> se desplaza al principio de la línea que
+          contiene la marca ‘<em>a</em>’. Puede desplazarse a la
+          posición exacta de cualquier marca utilizando el comando
+          `<code>(comillas inversas). Así,</code>z` se moverá
+          directamente a la posición exacta de la marca
+          ‘<em>z</em>’.</p>
+          <p>Como se trata de <em>movimientos</em>, también pueden
+          utilizarse como temas para otras <em>sentencias</em>.</p>
+          <p>Así, una forma de cortar una selección arbitraria de texto
+          sería soltar una marca (yo suelo usar ‘<em>a</em>’ como mi
+          <em>primera</em> marca, ‘<em>z</em>’ como mi siguiente marca,
+          ‘<em>b</em>’ como otra, y ‘<em>e</em>’ como otra más (no
+          recuerdo haber usado nunca interactivamente más de cuatro
+          marcas en 15 años de uso de vi; uno crea sus propias
+          convenciones respecto a cómo las marcas y los registros son
+          usados por macros que no perturban su contexto interactivo).
+          Entonces vamos al otro extremo de nuestro texto deseado;
+          podemos empezar en cualquier extremo, no importa. Entonces
+          podemos simplemente usar
+          <code>d</code>a<code>para cortar o</code>y<code>a</code> para
+          copiar. Así, todo el proceso tiene una sobrecarga de 5
+          pulsaciones (seis si empezamos en modo <em>insertar</em> y
+          necesitamos salir del modo comando con <code>Esc</code>). Una
+          vez que hemos cortado o copiado, pegar una copia es una sola
+          pulsación de tecla: <code>p</code>.</p>
+          <p>Digo que ésta es una forma de cortar o copiar texto. Sin
+          embargo, es sólo una de muchas. Frecuentemente podemos
+          describir más sucintamente el rango de texto sin mover nuestro
+          cursor alrededor y soltar una marca. Por ejemplo, si estoy en
+          un párrafo de texto, puedo utilizar los movimientos
+          <code>{</code> y <code>}</code> al principio o al final del
+          párrafo, respectivamente. Así, para mover un párrafo de texto
+          lo corto usando <code>{d}</code> (3 pulsaciones). (Si por
+          casualidad ya estoy en la primera o última línea del párrafo,
+          puedo usar simplemente <code>d}</code> o <code>d{</code>
+          respectivamente.</p>
+          <p>La noción de <em>párrafo</em> suele ser intuitivamente
+          razonable. Por lo tanto, a menudo funciona tanto para el
+          código como para la prosa.</p>
+          <p>Frecuentemente conocemos algún patrón (<a
+          href="https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular">expresión
+          regular</a>) que marca un extremo u otro del texto en el que
+          estamos interesados. Buscar hacia delante o hacia atrás son
+          movimientos en vi. Así que también pueden usarse como
+          <em>sujetos</em> en nuestras <em>sentencias</em>. Así, puedo
+          usar <code>d/foo</code> para cortar de la línea actual a la
+          siguiente línea que contenga la cadena <em>foo</em> y
+          <code>y?bar</code> para copiar de la línea actual a la línea
+          más reciente (anterior) que contenga <em>bar</em>. Si no
+          quiero líneas enteras puedo seguir utilizando los movimientos
+          de búsqueda (como sentencias propias), eliminar mi(s) marca(s)
+          y utilizar los comandos <code>\\</code>x` como se ha descrito
+          anteriormente.</p>
+          <p>Además de <em>verbos</em> y <em>sujetos</em>,
+          <strong>vi</strong> también tiene
+          <strong><em>objetos</em></strong> (en el sentido gramatical
+          del término). Hasta ahora sólo he descrito el uso del registro
+          anónimo. Sin embargo, puedo utilizar cualquiera de los 26
+          registros <em>con nombre</em> anteponiendo a la referencia
+          <em>objeto</em> el modificador de comillas dobles
+          <code>"</code>. Así, si utilizo <code>"add</code>, estoy
+          cortando la línea actual en el registro ‘<em>a</em>’, y si
+          utilizo <code>"by/foo</code>, estoy copiando el texto desde
+          aquí hasta la siguiente línea que contenga <em>foo</em> en el
+          registro <em>b</em>. Para pegar desde un registro, simplemente
+          antepongo la misma secuencia modificadora: <code>"ap</code>
+          pega una copia del contenido del registro ‘<em>a</em>’ en el
+          texto después del cursor y <code>"bP</code> pega una copia
+          desde ‘<em>b</em>’ hasta antes de la línea actual.</p>
+          <p>Esta noción de <em>prefijos</em> también añade los análogos
+          de los <em>adjetivos</em> y <em>adverbios</em> gramaticales a
+          nuestro <em>lenguaje</em> de manipulación de textos. La
+          mayoría de las órdenes (<em>verbos</em>) y movimientos
+          (<em>verbos</em> u <em>objetos</em>, según el contexto)
+          también pueden llevar prefijos numéricos. Así, <code>3J</code>
+          significa <em>unir las tres líneas siguientes</em> y
+          <code>d5}</code> significa <em>borrar desde la línea actual
+          hasta el final del quinto párrafo a partir de aquí</em>.</p>
+          <p>Todo esto es <strong>vi</strong> de nivel intermedio. Nada
+          de esto es específico de <strong>Vim</strong> y hay trucos
+          mucho más avanzados en <strong>vi</strong> si estás listo para
+          aprenderlos. Si dominaras sólo estos conceptos intermedios,
+          probablemente descubrirías que rara vez necesitas escribir
+          macros porque el lenguaje de manipulación de texto es lo
+          suficientemente conciso y expresivo como para hacer la mayoría
+          de las cosas fácilmente usando el lenguaje <em>nativo</em> del
+          editor.</p>
+          <h3 id="una-muestra-de-trucos-más-avanzados">Una muestra de
+          trucos más avanzados:</h3>
+          <p>Hay una serie de comandos en el modo de línea de comandos
+          <code>:</code>, entre los que destaca la técnica de
+          sustitución global <code>:%s/foo/bar/g</code>. (Eso no es
+          avanzado pero otros comandos pueden serlo). Todo el conjunto
+          de comandos (que se inician con <code>:</code> en modo normal)
+          fue históricamente heredado por las encarnaciones previas de
+          <strong>vi</strong> como las utilidades <strong>ed</strong>
+          (editor de líneas) y más tarde <strong>ex</strong> (editor de
+          líneas extendido). De hecho <strong>vi</strong> se llama así
+          porque es la interfaz visual de <strong>ex</strong>.</p>
+          <p>Los comandos operan normalmente sobre líneas de texto.
+          <strong>ed</strong> y <strong>ex</strong> se escribieron en
+          una época en la que las pantallas de terminal eran poco
+          comunes y muchos terminales eran dispositivos de
+          <em>teletipo</em> (TTY). Así que era común trabajar a partir
+          de copias impresas del texto, usando comandos a través de una
+          interfaz extremadamente escueta (las velocidades de conexión
+          comunes eran de 110 baudios, o, aproximadamente, 11 caracteres
+          por segundo, que es más lento que un mecanógrafo rápido; los
+          retrasos eran comunes en sesiones interactivas multiusuario;
+          además, a menudo había cierta motivación para conservar el
+          papel).</p>
+          <p>Así, la sintaxis de la mayoría de los <em>comandos</em>
+          <code>:</code> incluye una dirección o rango de direcciones
+          (número de línea) seguido de un comando. Naturalmente, se
+          pueden utilizar números de línea literales:
+          <code>:127,215s/foo/bar</code> para cambiar la primera
+          ocurrencia de <em>foo</em> por <em>bar</em> en cada línea
+          entre 127 y 215. También se pueden utilizar algunas
+          abreviaturas de <em>comandos</em> (N. del T. Por ejemplo
+          <code>:read</code> se abrevia <code>:r</code>). También se
+          pueden utilizar abreviaturas como <code>.</code> o
+          <code>$</code> para las líneas actual y anterior
+          respectivamente. También se pueden utilizar los prefijos
+          relativos <code>+</code> y <code>-</code> para referirse a los
+          desplazamientos posteriores o anteriores a la línea actual,
+          respectivamente. Así: <code>:%</code> es sinónimo de
+          <code>:1,$</code> (todas las líneas).</p>
+          <p>Los comandos <code>:...g</code> y <code>:...v</code>
+          merecen una explicación, ya que son increíblemente potentes.
+          <code>:...g</code> es un prefijo para aplicar
+          <em>Globalmente</em> un comando posterior a todas las líneas
+          que coincidan con un patrón (expresión regular), mientras que
+          <code>:...v</code> aplica dicho comando a todas las líneas que
+          NO coincidan con el patrón dado (<code>v</code> de
+          <em>conVerse</em>). Al igual que con otros comandos
+          <strong>ex</strong>, éstos pueden ir precedidos de referencias
+          de dirección/rango. Así <code>:.,+21g/foo/d</code> significa
+          <em>borra todas las líneas que contengan la cadena “foo” desde
+          la actual hasta las 21 líneas siguientes;</em> mientras que
+          <code>:.,$v/bar/d</code> significa <em>desde aquí hasta el
+          final del fichero, borra todas las líneas que
+          <strong>NO</strong> contengan la cadena “bar”</em>.</p>
+          <p>Es interesante que el comando común de Unix
+          <strong>grep</strong> se inspiró en realidad en este comando
+          <strong>ex</strong> (y recibe su nombre de la forma en que se
+          documentó). El comando <strong>ex</strong>
+          <code>:g/re/p</code> (<em>grep</em>) era la forma en que se
+          documentaba cómo <em>imprimir globalmente</em> las líneas que
+          contenían una <em>expresión regular</em> (re). Cuando se
+          usaban <strong>ed</strong> y <strong>ex</strong>, el comando
+          <code>:p</code> era uno de los primeros que cualquiera
+          aprendía y a menudo el primero que se usaba al editar
+          cualquier fichero. Era como se imprimía el contenido actual
+          (normalmente sólo una página completa cada vez usando
+          <code>:.,+25p</code> o algo así).</p>
+          <p>Note que <code>:%g/.../d</code> o (su contraparte
+          reVerse/conVerse: <code>:%v/.../d</code> son los patrones de
+          uso más comunes. Sin embargo, hay un par de otros comandos
+          <strong>ex</strong> que vale la pena recordar:</p>
+          <p>Podemos usar <code>m</code> para mover líneas, y
+          <code>j</code> para unir líneas. Por ejemplo, si tienes una
+          lista y quieres separar todas las cosas que coinciden (o que
+          NO coinciden con algún patrón) sin borrarlas, entonces puedes
+          usar algo como: <code>:%g/foo/m$</code> y todas las líneas
+          “foo” se habrán movido al final del fichero. (Tenga en cuenta
+          el otro consejo sobre el uso del final del archivo como
+          espacio de borrado). Esto habrá preservado el orden relativo
+          de todas las líneas “foo” a la vez que las habrá extraído del
+          resto de la lista. (Esto equivaldría a hacer algo como:
+          <code>1G!GGmap!Ggrep foo&lt;ENTER&gt;1G:1,'a g/foo'/d</code>
+          (<em>copiar el fichero a su propia cola, filtrar la cola a
+          través de grep, y borrar todo lo de la cabeza</em>).</p>
+          <p>Para unir líneas normalmente puedo encontrar un patrón para
+          todas las líneas que necesitan ser unidas a su predecesora
+          (todas las líneas que empiezan con <em>^<espacio></em> en
+          lugar de <em>^<espacio>*<espacio></em> en alguna lista de
+          viñetas, por ejemplo). Para ese caso yo usaría:
+          <code>:% g/^ /-1j</code> (para cada línea coincidente, subir
+          una línea y unirlas). (BTW: para listas de viñetas intentar
+          buscar las líneas de viñetas y unirlas a la siguiente no
+          funciona por un par de razones: puede unir una línea de
+          viñetas a otra, y no unirá ninguna línea de viñetas a todas
+          sus continuaciones; sólo funcionará por pares en las
+          coincidencias).</p>
+          <p>Casi no hace falta mencionar que puede utilizar nuestro
+          viejo amigo <code>s</code> (<em>sustituir</em>) con los
+          comandos <code>g</code> y <code>v</code>
+          (global/reverso-global). Normalmente no es necesario hacerlo.
+          Sin embargo, considere algún caso en el que desee realizar una
+          sustitución sólo en las líneas que coincidan con algún otro
+          patrón. A menudo puede utilizar un patrón complicado con
+          capturas y utilizar referencias retrospectivas para conservar
+          las partes de las líneas que NO desea cambiar. Sin embargo, a
+          menudo será más fácil separar la coincidencia de la
+          sustitución: <code>:%g/foo/s/bar/zzz/g</code> para cada línea
+          que contenga <em>foo</em> sustituya todo <em>bar</em> por
+          <em>zzz</em>. (Algo como
+          <code>:%s/\\(.*foo.*\\)bar(.*\\)/\\1zzz\\2/g</code> sólo
+          funcionaría para los casos en los que <em>bar</em> estuviera
+          PRECEDIDO por <em>foo</em> en la misma línea; ya es bastante
+          complicado, y tendría que complicarse aún más para capturar
+          todos los casos en los que <em>bar</em> precediera a
+          <em>foo</em>).</p>
+          <p>La cuestión es que hay más que líneas <code>p</code>,
+          <code>s</code> y <code>d</code> en el conjunto de comandos
+          <strong>ex</strong>.</p>
+          <p>Las direcciones con <code>:</code> también pueden referirse
+          a <em>marcas</em>. Así, puede usar: <code>:'a,'bg/foo/j</code>
+          para unir cualquier línea que contenga la cadena <em>foo</em>
+          a su línea subsiguiente, si se encuentra entre las líneas
+          entre las marcas ‘<em>a</em>’ y ‘<em>b</em>’. (Sí, todos los
+          ejemplos de comandos <strong>ex</strong> anteriores pueden
+          limitarse a subconjuntos de líneas del archivo anteponiendo
+          este tipo de expresiones de direccionamiento).</p>
+          <p>Eso es bastante oscuro (sólo he utilizado algo así unas
+          pocas veces en los últimos 15 años). Sin embargo, admito que a
+          menudo he hecho cosas de forma iterativa e interactiva que
+          probablemente podrían haberse hecho de forma más eficiente si
+          me hubiera tomado el tiempo de pensar en el encantamiento
+          correcto.</p>
+          <p>Otro comando <strong>vi</strong> o <strong>ex</strong> muy
+          útil es <code>:r</code> para leer el contenido de otro
+          fichero. Así: <code>:r foo</code> inserta el contenido del
+          fichero llamado <em>foo</em> en la línea actual.</p>
+          <p>Más potente es el comando <code>:r!</code> Esto lee los
+          resultados de un comando. Es lo mismo que suspender la sesión
+          de <strong>vi</strong>, ejecutar un comando, redirigir su
+          salida a un fichero temporal, reanudar la sesión de
+          <strong>vi</strong> y leer el contenido del fichero
+          temporal.</p>
+          <p>Aún más potentes son los comandos <code>!</code> (bang) y
+          <code>:...!</code> (ex bang). Estos también ejecutan comandos
+          externos y leen los resultados en el texto actual. Sin
+          embargo, también filtran selecciones de nuestro texto a través
+          del comando <code>!</code> Así podemos ordenar todas las
+          líneas de nuestro fichero usando <code>1G!Gsort</code>
+          (<code>G</code> es el comando <em>goto</em> de
+          <strong>vi</strong>; por defecto va a la última línea del
+          fichero, pero puede ir precedido de un número de línea, como
+          1, la primera línea). Esto equivale a la variante ex
+          <code>:1,$!sort</code>. Los escritores utilizan a menudo
+          <code>!</code> con las utilidades <strong>fmt</strong> o
+          <strong>fold</strong> de Unix para reformatear o
+          <em>empaquetar</em> selecciones de texto. Una macro muy común
+          es <code>{!}fmt</code> (<em>reformatea el párrafo
+          actual</em>). Los programadores a veces la utilizan para
+          ejecutar su código, o sólo partes de él, a través de
+          <strong>indent</strong> u otras herramientas de reformateo de
+          código (N. del T. <strong>indent</strong> es una antigua
+          herramienta de uso general para formatear código, actualmente
+          hay otros tipos de herramientas que pueden integrarse con
+          <em>vi</em>/<em>vim</em>/<em>neovim</em> como por ejemplo:
+          goimports, prettier, jq y cualquiera que acepte el texto a
+          formatear a traves de <em>stdin</em>).</p>
+          <p>El uso de los comandos <code>:r!</code> y <code>!</code>
+          significa que cualquier utilidad o filtro externo puede ser
+          tratado como una extensión de nuestro editor. Ocasionalmente
+          los he usado con scripts que sacaban datos de una base de
+          datos, o con comandos <strong>wget</strong> o
+          <strong>lynx</strong> que sacaban datos de un sitio web, o
+          comandos <strong>ssh</strong> que sacaban datos de sistemas
+          remotos.</p>
+          <p>Otro comando <strong>ex</strong> útil es <code>:so</code>
+          (abreviatura de <code>:source</code>). Esto lee el contenido
+          de un archivo como una serie de comandos. Cuando inicias vi
+          normalmente, implícitamente, realiza un <code>:source</code>
+          en el archivo <code>~/.exinitrc</code> (y Vim normalmente hace
+          esto en <code>~/.vimrc</code>, naturalmente)(N. del T. En
+          neovim es <code>~/.config/nvim/init.vim</code> o
+          <code>~/.config/nvim/init.lua</code>). La utilidad de esto es
+          que puedes cambiar tu perfil de editor sobre la marcha
+          simplemente introduciendo un nuevo conjunto de macros,
+          abreviaturas y configuraciones del editor. Si eres astuto
+          incluso puedes usar esto como un truco para almacenar
+          secuencias de comandos de edición <strong>ex</strong> para
+          aplicar a los archivos bajo demanda.</p>
+          <p>Por ejemplo, tengo un archivo de siete líneas (36
+          caracteres) que ejecuta un archivo a través de
+          <strong>wc</strong>, e inserta un comentario estilo C en la
+          parte superior del archivo que contiene los datos del recuento
+          de palabras. Puedo aplicar esa “macro” a un archivo usando un
+          comando como: <code>vim +'so mymacro.ex' ./mytarget</code></p>
+          <p>(La opción de línea de comandos <code>+</code> de
+          <strong>vi</strong> y <strong>Vim</strong> se utiliza
+          normalmente para iniciar la sesión de edición en un número de
+          línea determinado. Sin embargo es un hecho poco conocido que
+          uno puede seguir el <code>+</code> por cualquier
+          comando/expresión <strong>ex</strong> válida, tal como un
+          comando <em>fuente</em> como he hecho aquí; para un ejemplo
+          simple tengo scripts que invocan:
+          <code>vi +'/foo/d|wq!' ~/.ssh/known_hosts</code> para eliminar
+          una entrada de mi archivo SSH de hosts conocidos de forma no
+          interactiva mientras reimagino un conjunto de servidores).</p>
+          <p>Normalmente es mucho más fácil escribir tales
+          <em>macros</em> usando <strong>Perl</strong>,
+          <strong>AWK</strong>, <strong>sed</strong> (que es, de hecho,
+          como <strong>grep</strong> una utilidad inspirada en el
+          comando <strong>ed</strong>).</p>
+          <p>El comando <code>@</code> es probablemente el comando más
+          oscuro de <strong>vi</strong>. Enseñando ocasionalmente cursos
+          avanzados de administración de sistemas durante casi una
+          década he conocido a muy poca gente que lo haya usado alguna
+          vez. <code>@</code> ejecuta el contenido de un registro como
+          si fuera un comando <strong>vi</strong> o
+          <strong>ex</strong>.</p>
+          <p><strong>Ejemplo:</strong> A menudo uso:
+          <code>:r!locate...</code> para encontrar algún archivo en mi
+          sistema y leer su nombre en mi documento. A partir de ahí,
+          borro todos las secciones extrañas, dejando sólo la ruta
+          completa al archivo que me interesa. En lugar de pasar
+          laboriosamente por <code>Tab</code> a través de cada
+          componente de la ruta (o peor aún, si me encuentro en una
+          máquina sin soporte para completar Tab en su copia de
+          <strong>vi</strong>) simplemente uso:</p>
+          <ol type="1">
+          <li><code>0i:r</code> (para convertir la línea actual en un
+          comando :r válido),</li>
+          <li><code>"cdd</code> (para borrar la línea en el registro
+          ‘<em>c</em>’) y</li>
+          <li><code>@c</code> ejecutar ese comando.</li>
+          </ol>
+          <p>Eso son sólo 10 pulsaciones de tecla (y la expresión
+          <code>"cdd</code> <code>@c</code> es efectivamente una macro
+          de dedo para mí, así que puedo escribirla casi tan rápido como
+          cualquier palabra común de seis letras).</p>
+          <h3 id="un-pensamiento-aleccionador">Un pensamiento
+          aleccionador</h3>
+          <p>¡Sólo he arañado la superficie del poder de
+          <strong>vi</strong> y nada de lo que he descrito aquí es
+          siquiera parte de las <em>mejoras</em> por las que vim es
+          nombrado! Todo lo que he descrito aquí debería funcionar en
+          cualquier vieja copia de vi de hace 20 o 30 años.</p>
+          <p>Hay personas que han utilizado considerablemente más de la
+          potencia de <strong>vi</strong> de lo que yo nunca lo
+          haré.</p>
+        </section>
+      </article>
+
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>Walter Fabián Rodríguez Salazar</small>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <small>
+                <a href="https://gitlab.com/wfrodriguez">GitLab</a>
+              </small>
+            </li>
+            <li>
+              <small>
+                <a href="https://www.linkedin.com/in/walterfrs/">LinkedIn</a>
+              </small>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
+      </body>
+</html>

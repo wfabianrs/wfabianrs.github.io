@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    
+    <title>Bitácora de apuntes</title>
+    <link rel="icon" type="image/png" href="/static/img/w.svg" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <div style="text-align: center">
+          <img src="/static/img/w.svg" style="width: 200px" />
+        </div>
+                <nav>
+          <a href="/"><i class="mu mu-home"></i>Inicio</a>
+        </nav>
+              </header>
+
+      <article>
+                <header class="title">
+          <h1>Commit convencionales basado en gitmoji</h1>
+          <p class="date">2024-09-16</p>
+        </header>
+                 <hr />
+        <div class="tags">
+                    <span class="tag"><img src="/static/img/tag.svg" />git
+commit gitmoji conventional-commits</span>
+                  </div>
+        <hr />
+                <section>
+                    <!-- Body -->
+          <h1 id="commit-convencionales-basado-en-gitmoji">Commit
+          convencionales basado en gitmoji</h1>
+          <table>
+          <colgroup>
+          <col style="width: 21%" />
+          <col style="width: 21%" />
+          <col style="width: 2%" />
+          <col style="width: 45%" />
+          <col style="width: 9%" />
+          </colgroup>
+          <thead>
+          <tr class="header">
+          <th>Gitmoji</th>
+          <th>Gitmoji code</th>
+          <th>ID</th>
+          <th>Descripción original</th>
+          <th>Descripción traducida</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="odd">
+          <td>:art:</td>
+          <td>art</td>
+          <td></td>
+          <td>Improve structure / format of the code.</td>
+          <td>Mejorar la estructura y el formato del código.</td>
+          </tr>
+          <tr class="even">
+          <td>:zap:</td>
+          <td>zap</td>
+          <td></td>
+          <td>Improve performance.</td>
+          <td>Mejorar el rendimiento.</td>
+          </tr>
+          <tr class="odd">
+          <td>:fire:</td>
+          <td>fire</td>
+          <td></td>
+          <td>Remove code or files.</td>
+          <td>Eliminar código o archivos.</td>
+          </tr>
+          <tr class="even">
+          <td>:bug:</td>
+          <td>bug</td>
+          <td></td>
+          <td>Fix a bug.</td>
+          <td>Corregir un error.</td>
+          </tr>
+          <tr class="odd">
+          <td>:ambulance:</td>
+          <td>ambulance</td>
+          <td></td>
+          <td>Critical hotfix.</td>
+          <td>Corrección crítica.</td>
+          </tr>
+          <tr class="even">
+          <td>:sparkles:</td>
+          <td>sparkles</td>
+          <td></td>
+          <td>Introduce new features.</td>
+          <td>Introducir nuevas funciones.</td>
+          </tr>
+          <tr class="odd">
+          <td>:memo:</td>
+          <td>memo</td>
+          <td></td>
+          <td>Add or update documentation.</td>
+          <td>Añadir o actualizar documentación.</td>
+          </tr>
+          <tr class="even">
+          <td>:rocket:</td>
+          <td>rocket</td>
+          <td></td>
+          <td>Deploy stuff.</td>
+          <td>Desplegar cosas.</td>
+          </tr>
+          <tr class="odd">
+          <td>:lipstick:</td>
+          <td>lipstick</td>
+          <td></td>
+          <td>Add or update the UI and style files.</td>
+          <td>Añadir o actualizar la interfaz de usuario y los archivos
+          de estilo.</td>
+          </tr>
+          <tr class="even">
+          <td>:tada:</td>
+          <td>tada</td>
+          <td></td>
+          <td>Begin a project.</td>
+          <td>Iniciar un proyecto.</td>
+          </tr>
+          <tr class="odd">
+          <td>:white_check_mark:</td>
+          <td>white_check_mark</td>
+          <td></td>
+          <td>Add, update, or pass tests.</td>
+          <td>Añadir, actualizar o pasar pruebas.</td>
+          </tr>
+          <tr class="even">
+          <td>:lock:</td>
+          <td>lock</td>
+          <td></td>
+          <td>Fix security or privacy issues.</td>
+          <td>Solucionar problemas de seguridad o privacidad.</td>
+          </tr>
+          <tr class="odd">
+          <td>:closed_lock_with_key:</td>
+          <td>closed_lock_with_key</td>
+          <td></td>
+          <td>Add or update secrets.</td>
+          <td>Añadir o actualizar secretos.</td>
+          </tr>
+          <tr class="even">
+          <td>:bookmark:</td>
+          <td>bookmark</td>
+          <td></td>
+          <td>Release / Version tags.</td>
+          <td>Liberar / Versionar etiquetas.</td>
+          </tr>
+          <tr class="odd">
+          <td>:rotating_light:</td>
+          <td>rotating_light</td>
+          <td></td>
+          <td>Fix compiler / linter warnings.</td>
+          <td>Corregir advertencias del compilador / linter.</td>
+          </tr>
+          <tr class="even">
+          <td>:construction:</td>
+          <td>construction</td>
+          <td></td>
+          <td>Work in progress.</td>
+          <td>Trabajo en curso.</td>
+          </tr>
+          <tr class="odd">
+          <td>:green_heart:</td>
+          <td>green_heart</td>
+          <td></td>
+          <td>Fix CI Build.</td>
+          <td>Corregir CI Build.</td>
+          </tr>
+          <tr class="even">
+          <td>:arrow_down:</td>
+          <td>arrow_down</td>
+          <td></td>
+          <td>Downgrade dependencies.</td>
+          <td>Reducir dependencias.</td>
+          </tr>
+          <tr class="odd">
+          <td>:arrow_up:</td>
+          <td>arrow_up</td>
+          <td></td>
+          <td>Upgrade dependencies.</td>
+          <td>Actualizar dependencias.</td>
+          </tr>
+          <tr class="even">
+          <td>:pushpin:</td>
+          <td>pushpin</td>
+          <td></td>
+          <td>Pin dependencies to specific versions.</td>
+          <td>Vincular dependencias a versiones específicas.</td>
+          </tr>
+          <tr class="odd">
+          <td>:construction_worker:</td>
+          <td>construction_worker</td>
+          <td></td>
+          <td>Add or update CI build system.</td>
+          <td>Añadir o actualizar el sistema de compilación CI.</td>
+          </tr>
+          <tr class="even">
+          <td>:chart_with_upwards_trend:</td>
+          <td>chart_with_upwards_trend</td>
+          <td></td>
+          <td>Add or update analytics or track code.</td>
+          <td>Añadir o actualizar análisis o código de seguimiento.</td>
+          </tr>
+          <tr class="odd">
+          <td>:recycle:</td>
+          <td>recycle</td>
+          <td></td>
+          <td>Refactor code.</td>
+          <td>Refactorizar código.</td>
+          </tr>
+          <tr class="even">
+          <td>:heavy_plus_sign:</td>
+          <td>heavy_plus_sign</td>
+          <td></td>
+          <td>Add a dependency.</td>
+          <td>Añadir una dependencia.</td>
+          </tr>
+          <tr class="odd">
+          <td>:heavy_minus_sign:</td>
+          <td>heavy_minus_sign</td>
+          <td></td>
+          <td>Remove a dependency.</td>
+          <td>Eliminar una dependencia.</td>
+          </tr>
+          <tr class="even">
+          <td>:wrench:</td>
+          <td>wrench</td>
+          <td></td>
+          <td>Add or update configuration files.</td>
+          <td>Añadir o actualizar archivos de configuración.</td>
+          </tr>
+          <tr class="odd">
+          <td>:hammer:</td>
+          <td>hammer</td>
+          <td></td>
+          <td>Add or update development scripts.</td>
+          <td>Añadir o actualizar scripts de desarrollo.</td>
+          </tr>
+          <tr class="even">
+          <td>:globe_with_meridians:</td>
+          <td>globe_with_meridians</td>
+          <td></td>
+          <td>Internationalization and localization.</td>
+          <td>Internacionalización y localización.</td>
+          </tr>
+          <tr class="odd">
+          <td>:pencil2:</td>
+          <td>pencil2</td>
+          <td></td>
+          <td>Fix typos.</td>
+          <td>Corregir errores tipográficos.</td>
+          </tr>
+          <tr class="even">
+          <td>:poop:</td>
+          <td>poop</td>
+          <td></td>
+          <td>Write bad code that needs to be improved.</td>
+          <td>Escribir código incorrecto que debe mejorarse.</td>
+          </tr>
+          <tr class="odd">
+          <td>:rewind:</td>
+          <td>rewind</td>
+          <td></td>
+          <td>Revert changes.</td>
+          <td>Revertir cambios.</td>
+          </tr>
+          <tr class="even">
+          <td>:twisted_rightwards_arrows:</td>
+          <td>twisted_rightwards_arrows</td>
+          <td></td>
+          <td>Merge branches.</td>
+          <td>Fusionar ramas.</td>
+          </tr>
+          <tr class="odd">
+          <td>:package:</td>
+          <td>package</td>
+          <td></td>
+          <td>Add or update compiled files or packages.</td>
+          <td>Añadir o actualizar archivos o paquetes compilados.</td>
+          </tr>
+          <tr class="even">
+          <td>:alien:</td>
+          <td>alien</td>
+          <td></td>
+          <td>Update code due to external API changes.</td>
+          <td>Actualizar código debido a cambios externos en la
+          API.</td>
+          </tr>
+          <tr class="odd">
+          <td>:truck:</td>
+          <td>truck</td>
+          <td></td>
+          <td>Move or rename resources (e.g.: files, paths,
+          routes).</td>
+          <td>Mover o renombrar recursos (por ejemplo: archivos, rutas,
+          rutas).</td>
+          </tr>
+          <tr class="even">
+          <td>:page_facing_up:</td>
+          <td>page_facing_up</td>
+          <td></td>
+          <td>Add or update license.</td>
+          <td>Añadir o actualizar licencias.</td>
+          </tr>
+          <tr class="odd">
+          <td>:boom:</td>
+          <td>boom</td>
+          <td></td>
+          <td>Introduce breaking changes.</td>
+          <td>Introducir cambios de última hora.</td>
+          </tr>
+          <tr class="even">
+          <td>:bento:</td>
+          <td>bento</td>
+          <td></td>
+          <td>Add or update assets.</td>
+          <td>Añadir o actualizar activos.</td>
+          </tr>
+          <tr class="odd">
+          <td>:wheelchair:</td>
+          <td>wheelchair</td>
+          <td></td>
+          <td>Improve accessibility.</td>
+          <td>Mejorar la accesibilidad.</td>
+          </tr>
+          <tr class="even">
+          <td>:bulb:</td>
+          <td>bulb</td>
+          <td></td>
+          <td>Add or update comments in source code.</td>
+          <td>Añadir o actualizar comentarios en el código fuente.</td>
+          </tr>
+          <tr class="odd">
+          <td>:beers:</td>
+          <td>beers</td>
+          <td></td>
+          <td>Write code drunkenly.</td>
+          <td>Escribir código borracho.</td>
+          </tr>
+          <tr class="even">
+          <td>:speech_balloon:</td>
+          <td>speech_balloon</td>
+          <td></td>
+          <td>Add or update text and literals.</td>
+          <td>Añadir o actualizar texto y literales.</td>
+          </tr>
+          <tr class="odd">
+          <td>:card_file_box:</td>
+          <td>card_file_box</td>
+          <td></td>
+          <td>Perform database related changes.</td>
+          <td>Realizar cambios relacionados con la base de datos.</td>
+          </tr>
+          <tr class="even">
+          <td>:loud_sound:</td>
+          <td>loud_sound</td>
+          <td></td>
+          <td>Add or update logs.</td>
+          <td>Añadir o actualizar logs.</td>
+          </tr>
+          <tr class="odd">
+          <td>:mute:</td>
+          <td>mute</td>
+          <td></td>
+          <td>Remove logs.</td>
+          <td>Eliminar registros.</td>
+          </tr>
+          <tr class="even">
+          <td>:busts_in_silhouette:</td>
+          <td>busts_in_silhouette</td>
+          <td></td>
+          <td>Add or update contributor(s).</td>
+          <td>Añadir o actualizar colaboradores.</td>
+          </tr>
+          <tr class="odd">
+          <td>:children_crossing:</td>
+          <td>children_crossing</td>
+          <td></td>
+          <td>Improve user experience / usability.</td>
+          <td>Mejorar la experiencia de usuario / usabilidad.</td>
+          </tr>
+          <tr class="even">
+          <td>:building_construction:</td>
+          <td>building_construction</td>
+          <td></td>
+          <td>Make architectural changes.</td>
+          <td>Realizar cambios arquitectónicos.</td>
+          </tr>
+          <tr class="odd">
+          <td>:iphone:</td>
+          <td>iphone</td>
+          <td></td>
+          <td>Work on responsive design.</td>
+          <td>Trabajar en diseño responsivo.</td>
+          </tr>
+          <tr class="even">
+          <td>:clown_face:</td>
+          <td>clown_face</td>
+          <td></td>
+          <td>Mock things.</td>
+          <td>Simular cosas.</td>
+          </tr>
+          <tr class="odd">
+          <td>:egg:</td>
+          <td>egg</td>
+          <td></td>
+          <td>Add or update an easter egg.</td>
+          <td>Añadir o actualizar un easter egg.</td>
+          </tr>
+          <tr class="even">
+          <td>:see_no_evil:</td>
+          <td>see_no_evil</td>
+          <td></td>
+          <td>Add or update a .gitignore file.</td>
+          <td>Añadir o actualizar un archivo .gitignore.</td>
+          </tr>
+          <tr class="odd">
+          <td>:camera_flash:</td>
+          <td>camera_flash</td>
+          <td></td>
+          <td>Add or update snapshots.</td>
+          <td>Añadir o actualizar snapshots.</td>
+          </tr>
+          <tr class="even">
+          <td>:alembic:</td>
+          <td>alembic</td>
+          <td></td>
+          <td>Perform experiments.</td>
+          <td>Realizar experimentos.</td>
+          </tr>
+          <tr class="odd">
+          <td>:mag:</td>
+          <td>mag</td>
+          <td></td>
+          <td>Improve SEO.</td>
+          <td>Mejorar el SEO.</td>
+          </tr>
+          <tr class="even">
+          <td>:label:</td>
+          <td>label</td>
+          <td></td>
+          <td>Add or update types.</td>
+          <td>Añadir o actualizar tipos.</td>
+          </tr>
+          <tr class="odd">
+          <td>:seedling:</td>
+          <td>seedling</td>
+          <td></td>
+          <td>Add or update seed files.</td>
+          <td>Añadir o actualizar archivos semilla.</td>
+          </tr>
+          <tr class="even">
+          <td>:triangular_flag_on_post:</td>
+          <td>triangular_flag_on_post</td>
+          <td></td>
+          <td>Add, update, or remove feature flags.</td>
+          <td>Añadir, actualizar o eliminar indicadores de
+          características.</td>
+          </tr>
+          <tr class="odd">
+          <td>:goal_net:</td>
+          <td>goal_net</td>
+          <td></td>
+          <td>Catch errors.</td>
+          <td>Detectar errores.</td>
+          </tr>
+          <tr class="even">
+          <td>:dizzy:</td>
+          <td>dizzy</td>
+          <td></td>
+          <td>Add or update animations and transitions.</td>
+          <td>Añadir o actualizar animaciones y transiciones.</td>
+          </tr>
+          <tr class="odd">
+          <td>:wastebasket:</td>
+          <td>wastebasket</td>
+          <td></td>
+          <td>Deprecate code that needs to be cleaned up.</td>
+          <td>Eliminar código obsoleto que necesita ser limpiado.</td>
+          </tr>
+          <tr class="even">
+          <td>:passport_control:</td>
+          <td>passport_control</td>
+          <td></td>
+          <td>Work on code related to authorization, roles and
+          permissions.</td>
+          <td>Trabajar en código relacionado con autorizaciones, roles y
+          permisos.</td>
+          </tr>
+          <tr class="odd">
+          <td>:adhesive_bandage:</td>
+          <td>adhesive_bandage</td>
+          <td></td>
+          <td>Simple fix for a non-critical issue.</td>
+          <td>Corrección simple de un problema no crítico.</td>
+          </tr>
+          <tr class="even">
+          <td>:monocle_face:</td>
+          <td>monocle_face</td>
+          <td></td>
+          <td>Data exploration/inspection.</td>
+          <td>Exploración/inspección de datos.</td>
+          </tr>
+          <tr class="odd">
+          <td>:coffin:</td>
+          <td>coffin</td>
+          <td></td>
+          <td>Remove dead code.</td>
+          <td>Eliminar código muerto.</td>
+          </tr>
+          <tr class="even">
+          <td>:test_tube:</td>
+          <td>test_tube</td>
+          <td></td>
+          <td>Add a failing test.</td>
+          <td>Añadir una prueba que falla.</td>
+          </tr>
+          <tr class="odd">
+          <td>:necktie:</td>
+          <td>necktie</td>
+          <td></td>
+          <td>Add or update business logic.</td>
+          <td>Añadir o actualizar la lógica de negocio.</td>
+          </tr>
+          <tr class="even">
+          <td>:stethoscope:</td>
+          <td>stethoscope</td>
+          <td></td>
+          <td>Add or update healthcheck.</td>
+          <td>Añadir o actualizar un chequeo.</td>
+          </tr>
+          <tr class="odd">
+          <td>:bricks:</td>
+          <td>bricks</td>
+          <td></td>
+          <td>Infrastructure related changes.</td>
+          <td>Cambios relacionados con la infraestructura.</td>
+          </tr>
+          <tr class="even">
+          <td>:technologist:</td>
+          <td>technologist</td>
+          <td></td>
+          <td>Improve developer experience.</td>
+          <td>Mejorar la experiencia del desarrollador.</td>
+          </tr>
+          <tr class="odd">
+          <td>:money_with_wings:</td>
+          <td>money_with_wings</td>
+          <td></td>
+          <td>Add sponsorships or money related infrastructure.</td>
+          <td>Añadir patrocinios o infraestructura relacionada con el
+          dinero.</td>
+          </tr>
+          <tr class="even">
+          <td>:thread:</td>
+          <td>thread</td>
+          <td></td>
+          <td>Add or update code related to multithreading or
+          concurrency.</td>
+          <td>Añadir o actualizar código relacionado con multithreading
+          o concurrencia.</td>
+          </tr>
+          <tr class="odd">
+          <td>:safety_vest:</td>
+          <td>safety_vest</td>
+          <td></td>
+          <td>Add or update code related to validation.</td>
+          <td>Añadir o actualizar código relacionado con la
+          validación.</td>
+          </tr>
+          </tbody>
+          </table>
+        </section>
+      </article>
+
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>Walter Fabián Rodríguez Salazar</small>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <small>
+                <a href="https://gitlab.com/wfrodriguez">GitLab</a>
+              </small>
+            </li>
+            <li>
+              <small>
+                <a href="https://www.linkedin.com/in/walterfrs/">LinkedIn</a>
+              </small>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
+      </body>
+</html>
